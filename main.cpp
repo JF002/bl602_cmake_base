@@ -146,7 +146,7 @@ void HelloTask(void *params) {
 
 extern "C" void bfl_main()
 {
-  static StackType_t stack[1024*20];
+  static StackType_t stack[1024];
   static StaticTask_t eventLoopTaskHandle;
 
   bl_uart_init(0, 16, 7, 255, 255, 2 * 1000 * 1000);
@@ -155,6 +155,6 @@ extern "C" void bfl_main()
   vPortDefineHeapRegions(xHeapRegions);
   system_init();
 
-  xTaskCreateStatic(HelloTask, (char*)"eventLoopTask", 1024 * 20, NULL, 15, stack, &eventLoopTaskHandle);
+  xTaskCreateStatic(HelloTask, (char*)"eventLoopTask", 1024, NULL, 15, stack, &eventLoopTaskHandle);
   vTaskStartScheduler();
 }
