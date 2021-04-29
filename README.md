@@ -17,6 +17,10 @@ The files `BL602_Cmake.bin`, `BL602_Cmake.out` and `BL602_Cmake.hex` are generat
 
 You can use a [flasher for the BL602](https://github.com/mkroman/awesome-bouffalo#rom-tools) to flash the firmware to the BL602 using the USB-To-Serial port. 
 
+# How to build the RISC-V toolchain for an ARM host machine
+
+See [this page](doc/build-toolchain-on-arm.md) explaining how to build the RISC-V toolchain on a PinebookPro.
+
 # How to flash
 As far as I know, it's not possible to flash the firmware using OpenOCD and a JTAG adapter. You can still flash the board using the bootlaoder, over a serial port.
 
