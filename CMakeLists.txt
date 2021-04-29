@@ -123,3 +123,4 @@ add_custom_command(TARGET BL602_Cmake
         COMMAND ${CMAKE_OBJCOPY} -O binary BL602_Cmake.out "BL602_Cmake.bin"
         COMMAND ${CMAKE_OBJCOPY} -O ihex BL602_Cmake.out "BL602_Cmake.hex"
         COMMENT "post build steps for BL602_Cmake")
+)
